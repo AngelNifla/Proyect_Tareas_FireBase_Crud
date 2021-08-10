@@ -1,5 +1,7 @@
-# PROYECTO FINAL: APLICACIÓN WEB DE TODO LIST :memo: :pencil:
+# PROYECTO FINAL: APLICACIÓN WEB DE TODO LIST :memo:
 _AUTORES: Jenny Huanca Anquise y Manuel Ángel Nifla Llallacachsi_
+
+**Video del funcionamiento:** https://drive.google.com 
 
 ## Introducción
 Como parte de las herramientas de gestión y organización de tiempo tenemos a la _To Do List_. 
@@ -12,7 +14,7 @@ Nuestra aplicación web tiene como finalidad desarrollar una ToDo List virtual p
 - Editor: Visual Studio Code
 - Frontend: React y Extensión React Developer Tools 
 - Base de Datos: Firebase -Realtime DataBase
-- Otros: Node.js o Yarn
+- Otros: Node.js o Yarn. Html y css 
 
 ## Instalación e Inicio
 1. Debe tener instalado **Node y NPM** para poder instalar **React**.  En caso de no querer trabajar el manejo de módulos con Node, puede usar en su lugar **Yarn**

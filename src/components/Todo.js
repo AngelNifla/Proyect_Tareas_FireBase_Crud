@@ -3,6 +3,9 @@ import firebase from "../util/firebase";
 // import "../App.css";
 
 export default function Todo({ todo }) {
+  const textInput = React.useRef();
+  // const setFocus = useState(false);
+
   const [newTitle, setNewTitle] = useState("");
 
   const deleteTodo = () => {
@@ -20,8 +23,12 @@ export default function Todo({ todo }) {
     const todoRef = firebase.database().ref("Todo").child(todo.id);
     todoRef.update({
       title: newTitle,
-    });
+      edited: !todo.edited,
+    });   
+    if (todo.edited === false)
+      textInput.current.focus();
   };
+
   const handleChange = (e) => {
     //e.preventDefault();
     if (todo.complete === true) {
@@ -38,20 +45,18 @@ export default function Todo({ todo }) {
         value={todo.title === "" ? newTitle : todo.title}
         className={todo.complete ? "list complete" : "list"}
         onChange={handleChange}
+        ref={textInput}
+        // disabled = {todo.edited ? false : true}
       />
 
-      {/* <h1 className={todo.complete ? "complete" : ""}>{todo.title}</h1> */}
       <div>
-        {/* <button onClick={deleteTodo}>Delete</button>
-        <button onClick={completeTodo}>Complete</button> */}
-
-        <button className="button-complete task-button" onClick={completeTodo}>
+        <button className={todo.edited ? "task-button disabled" : "button-complete task-button"} onClick={completeTodo}>
           <i className="fa fa-check-circle"></i>
         </button>
         <button className={todo.complete ? "task-button disabled" :"button-edit task-button"} onClick={editTodo}>
-          <i className="fa fa-edit"></i>
+          <i className={todo.edited ? "fa fa-check" :"fa fa-edit"}></i>
         </button>
-        <button className="button-delete task-button" onClick={deleteTodo}>
+        <button className={todo.edited ? "task-button disabled" : "button-delete task-button"} onClick={deleteTodo}>
           <i className="fa fa-trash"></i>
         </button>
       </div>

@@ -3,7 +3,7 @@ import firebase from "../util/firebase";
 
 export default function Forms() {
   const [title, setTitle] = useState("");
-
+  
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -17,6 +17,7 @@ export default function Forms() {
     const todo = {
       title,
       complete: false,
+      edited: false,
     };
     todoRef.push(todo);
     // otherRef.push(other);

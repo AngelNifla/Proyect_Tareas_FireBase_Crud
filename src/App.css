@@ -84,10 +84,12 @@ form {
   font-size: 25px;
   border-radius: 50%;
   margin-right: 10px;
-
+}
+.task-button:last-child {
+  margin-right: 0px;
 }
 .task-button.disabled {
-  color: gray;
+  color: rgb(177, 177, 177);
   pointer-events: none;
   cursor: not-allowed;
 }
@@ -99,7 +101,6 @@ form {
 }
 .button-delete {
   color: #ff6b6b;
-  margin-right: 0;
 }
 .list { /* input */
   width: auto;
@@ -119,9 +120,10 @@ form {
   opacity: 0.75; 
 }
 
-.list:focus {
-  background-color: #cac4ce;
-  border-radius: 10px;
+.list:focus,
+.list:focus-within {
+  background-color: #c3c3e9;
+  border-radius: 5px;
 }
 input:focus,
 button:focus {

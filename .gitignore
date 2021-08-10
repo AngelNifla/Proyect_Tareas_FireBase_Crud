@@ -24,3 +24,4 @@ yarn-error.log*
 
 /util/firebase.js
 data.json
+yarn.lock

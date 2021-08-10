@@ -1,6 +1,6 @@
 {
-  "name": "crud",
-  "version": "0.1.0",
+  "name": "todo",
+  "version": "0.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -35,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/AngelNifla/Proyect_Tareas_FireBase_Crud",
+  "author": "Jenny Ha <jhuancaan@unsa.edu.pe>",
+  "license": "MIT"
 }
